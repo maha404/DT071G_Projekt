@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,31 +9,31 @@ namespace PROJEKT
 {
     public class Level
     {
-        public int width = 20;
-        public int height = 10;
-        public int sides = 10;
-        public int top = 10;
+        public int LevelNumber { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
 
-        public void drawLevel()
+
+        public class Level1 : Level
         {
-            // Rita den övre linjen
-            Console.Write("+");
-            for (int i = 0; i < width; i++)
+            public Level1()
             {
-                Console.Write("-");
-            }
-            Console.Write("+");
-
-            // Rita sidorna
-            for(int i = 0; i < height; i++)
-            {
-                Console.SetCursorPosition(0, 0);
-                Console.Write("|");
+                LevelNumber = 1;
+                Width = 30;
+                Height = 20;
             }
 
-            // Rida den nedre linjen + hörn
         }
 
-        
+        public class Level2 : Level
+        {
+            public Level2()
+            {
+                LevelNumber = 2;
+                Width = 20;
+                Height = 15;
+            }
+        }
+
     }
 }

@@ -11,7 +11,6 @@ namespace PROJEKT
         // Properties
         public int X { get; set; }
         public int Y { get; set; }
-
-        
+  
     }
 }

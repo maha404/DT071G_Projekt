@@ -1,26 +1,35 @@
-﻿namespace PROJEKT
+﻿using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
+using System.Text.Json;
+using static PROJEKT.Level;
+
+namespace PROJEKT
 {
     class Program
     {
+        
         public static void Main()
         {
-            Point point = new Point();
-            point.PrintPoints();
+           
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Välkommen till Snake!");
+            Console.WriteLine("Klicka på Enter för att börja");
+            Console.ResetColor();
 
-            switch (Console.ReadLine())
+            ConsoleKeyInfo key = Console.ReadKey();
+            Game game = new Game();
+
+            switch (key.Key)
             {
-                case "s":
-                    Snake snake = new Snake();
-                    snake.Move();
+                case ConsoleKey.Enter:
+                    game.StartGame();
                     break;
-                case "X":
-                    return;
 
             }
-            
-           
-           
+
+              
         }
 
     }
+
 }

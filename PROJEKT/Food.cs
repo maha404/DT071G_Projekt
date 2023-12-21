@@ -17,7 +17,7 @@ namespace PROJEKT
         public Food()
         {
             snakeFood = "#";
-            DrawNewFood(); // Kallar på metoden DrawNewFood för att hämta ett nytt värde/placering för maten
+            DrawNewFood(5, 5); // Kallar på metoden DrawNewFood för att hämta ett nytt värde/placering för maten
         }
 
         // Methods
@@ -27,19 +27,15 @@ namespace PROJEKT
         {
             Console.SetCursorPosition(foodX, foodY);
             Console.Write(snakeFood);
-            
         }
-
 
         // Ritar om maten på en ny plats på spelplanen
-        public void DrawNewFood()
+        public void DrawNewFood(int width, int height)
         {
             Random random = new Random();
-            foodX = random.Next(0, Console.WindowWidth);
-            foodY = random.Next(0, Console.WindowHeight);
+            foodX = random.Next(1, width - 1);
+            foodY = random.Next(1, height - 1);
         }
-
-        
 
     }
 }
