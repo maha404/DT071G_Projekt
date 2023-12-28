@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Kod skriven av Maria Halvarsson - Projekt i kursen DT071G
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,11 +10,13 @@ namespace PROJEKT
 {
     public class InputHandler
     {
+        // Properties
         public int DirectionX;
         public int DirectionY;
         public int Sides;
         public int Top;
 
+        // Constructor
         public InputHandler(int top, int sides)
         {
             DirectionX = 1;
@@ -21,6 +24,10 @@ namespace PROJEKT
             Sides = sides;
             Top = top;
         }
+
+        // Methods 
+
+        // Method för att hantera användarens tangent input.
         public void HandleInput()
         {
             // if villkoret kollar om en tangent finns tillgänglig i input stream. 

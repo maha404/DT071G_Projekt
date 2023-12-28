@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Kod skriven av Maria Halvarsson - Projekt i kursen DT071G
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -38,6 +39,7 @@ namespace PROJEKT
            
         }
 
+        // Återställer positionen och längden på ormen så den inte skrivs ut i en av ramarna. 
         public void ResetPosition(int centerX, int CenterY)
         {
             SnakeBody.Clear();

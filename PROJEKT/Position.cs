@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Kod skriven av Maria Halvarsson - Projekt i kursen DT071G
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
