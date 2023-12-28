@@ -219,7 +219,7 @@ namespace PROJEKT
             string currentDirectory = Environment.CurrentDirectory;
 
             // Relativ sökväg till filen
-            string path = Path.GetFullPath("C:\\Users\\Maria\\OneDrive\\Skrivbord\\c#\\PROJEKT\\highscore.json");
+            string path = Path.GetFullPath(@"..\..\..\highscore.json");
 
             var newHighscore = new Score
             {
