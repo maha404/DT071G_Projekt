@@ -3,6 +3,7 @@
 Välkommen till mitt Snake spel! :snake:
 
 Detta spel är skapat i C# .NET och är ett konsolspel som har inspererats av det klassiska Snake-spelet. Applikationens kod finns i "master" branchen.
+
 I projektet så har bland annat dessa tekniker / verktyg används: 
 * [Spectre.Console](https://spectreconsole.net/)
 * [ASCII art](https://programmingisfun.com/command-line-ascii-design/)
