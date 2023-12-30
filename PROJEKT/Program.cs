@@ -36,7 +36,7 @@ namespace PROJEKT
             Game game = new Game();
 
             // En panel som kommer ifrån Spectre.Console
-            var panel = new Panel("[springgreen3_1]1. Starta Spel[/] \n[yellow]2. Se highscore[/]\n[red1]3. Avsluta[/]");
+            var panel = new Panel("[springgreen3_1]1. Starta Spel[/] \n[yellow]2. Se highscore[/]\n[teal]3. Så spelar du[/]\n[red1]4. Avsluta[/]");
             panel.Header = new PanelHeader("Snake - Meny"); 
             panel.Border = BoxBorder.Double;
             panel.Padding = new Padding(2, 2, 2, 2);
@@ -46,6 +46,28 @@ namespace PROJEKT
             Console.Write("Vad vill du göra?: ");
             string choice = Console.ReadLine();
             MainMenu();
+
+            // Method för huvudmenyn för spelet. 
+            void MainMenu()
+            {
+                switch (choice)
+                {
+                    case "1":
+                        game.StartGame(); // Startar spelet. 
+                        break;
+                    case "2":
+                        Console.Clear();
+                        PrintHighscore(); // Skriver ut Highscore till konsolen. 
+                        break;
+                    case "3":
+                        HowToPlay();
+                        break;
+                    case "4":
+                        System.Environment.Exit(0); // Avslutar programmet. 
+                        break;
+
+                }
+            }
 
             // Method som skriver ut highscore till konsolen. 
             void PrintHighscore()
@@ -93,24 +115,18 @@ namespace PROJEKT
 
             }
             
-            // Method för huvudmenyn för spelet. 
-            void MainMenu()
+            void HowToPlay()
             {
-                switch (choice)
-                {
-                    case "1":
-                        game.StartGame(); // Startar spelet. 
-                        break;
-                    case "2":
-                        Console.Clear();
-                        PrintHighscore(); // Skriver ut Highscore till konsolen. 
-                        break;
-                    case "3":
-                        System.Environment.Exit(0); // Avslutar programmet. 
-                        break;
-                }
+                Console.Clear();
+                var panel = new Panel("Använd piltangenterna för att styra ormen.\nOm du krockar in i någon utav de fyra väggarna så kommer spelet att avslutas");
+                panel.Header = new PanelHeader("Snake - Så spelar du");
+                panel.Border = BoxBorder.Double;
+                panel.Padding = new Padding(2, 2, 2, 2);
+                AnsiConsole.Write(panel);
+                Console.WriteLine("Klicka på enter för att komma tillbaka till huvudmenyn");
+                Console.ReadKey();
+                Main();
             }
-              
         }
     }
 
